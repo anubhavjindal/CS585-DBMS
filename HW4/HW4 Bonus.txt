@@ -1,0 +1,71 @@
+CSCI-585 HOMEWORK 4
+##############################
+SUBMITTED BY : ANUBHAV JINDAL
+USC-ID : 5963113610
+##############################
+
+
+Q1:
+
+g= TinkerGraph.open().traversal()
+
+g.addV().property(id,'cs101').as ('cs101').
+addV().property(id,'cs201').as ('cs201').
+addV().property(id,'cs220').as ('cs220').
+addV().property(id,'cs334').as ('cs334').
+addV().property(id,'cs420').as ('cs420').
+addV().property(id,'cs681').as ('cs681').
+addV().property(id,'cs400').as ('cs400').
+addV().property(id,'cs526').as ('cs526').
+addE('prereq').from('cs201').to ('cs101').
+addE('prereq').from('cs220').to ('cs201').
+addE('prereq').from('cs334').to ('cs201').
+addE('prereq').from('cs681').to ('cs334').
+addE('prereq').from('cs400').to ('cs334').
+addE('prereq').from('cs420').to ('cs220').
+addE('coreqs').from('cs420').to ('cs220').
+addE('prereq').from('cs526').to ('cs400').
+addE('coreqs').from('cs526').to ('cs400').iterate()
+
+The above commands will create a new Graph. Following is the explanation in order of the command execution: 
+ - open() command will create a new TinkerGraph which is stored by a variable g. 
+ - traversal() command allows us to simply traverse the graph.
+ - addV() command allows us to add vertices.
+ - property() command sets its property so that it can be accessed easily at a later point while also ensuring that the node has an identifier. For example: cs101 as id.
+ - as() command allows us to reference the vertex using an alias. 
+ - addE() command is used to add edges among the vertices.
+ - The from() and to() gives the direction to the edge.    
+
+
+Q2:
+
+g.V().as("a").out("coreqs").as("b").select("a","b")
+
+The above command will find all edges where there is a double connection. 
+ - out() command will output the adjacent vertices to the vertices which have coreqs labelled edge.
+ - as() command is used to alias the vertices as a and b so that it labels them as a and b when it traverses through all the vertices.
+ - select() command extracts and emits the contents in a and b. 
+
+
+Q3:
+
+g.V().has(id,'cs526').repeat(out().dedup()).emit()
+
+The above command will return all the ancestors of a node until the root is reached.
+ - has() command is used to specify the condition. Here we specify the id of the vertex which we want to find the ancestors of. 
+ - repeat() command loops over the graph section starting at cs526.
+ - out() command outputs the vertices connected and this loops over all the vertices till we reach the root.
+ - dedup() command is used to make sure that there are no duplicates.
+ - emit() command gives out the final output after the repeat() command has completed the traversal.
+
+
+Q4:
+
+g.V().has(id,'cs101').repeat(__.in()).emit().path().count(local).max()
+
+The above command will return the longest possible path that can be taken in the graph.
+ - has() command is used to specify the starting point as cs101. 
+ - in() command gets the adjacent vertices of cs101 at the beginning.
+ - repeat() command loops over all the vertices.
+ - path() along with count() command calculate the path lengths from cs101.
+ - max() command will select the maximum possible path length in the graph.

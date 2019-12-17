@@ -1,0 +1,27 @@
+
+TABLE CREATION AND INSERT QUERIES
+
+create table spata(Loc_ID integer primary key,Loc_Dec varchar(25),g Geometry);
+
+insert into spata values(1,'Leavy Library',ST_GeomFromText('POINT(-118.283079 34.021620)'));	
+insert into spata values(2,'SGM',ST_GeomFromText('POINT(-118.2891085 34.0218945)'));
+insert into spata values(3,'USC Village',ST_GeomFromText('POINT(-118.284187 34.023956)'));
+insert into spata values(4,'Bookstore',ST_GeomFromText('POINT(-118.286403 34.020822)'));
+insert into spata values(5,'Figueroa St',ST_GeomFromText('POINT(-118.280203 34.0218359)'));	
+insert into spata values(6,'West Expo Blvd',ST_GeomFromText('POINT(-118.286301 34.018638)'));	 
+insert into spata values(7,'Vermont',ST_GeomFromText('POINT(-118.2914482 34.0184413)'));
+insert into spata values(8,'Symphonic hall',ST_GeomFromText('POINT(-118.2853986 34.02331)'));
+insert into spata values(9,'Cinematics School',ST_GeomFromText('POINT(-118.286447 34.023818)'));
+insert into spata values(10,'Salvatory Lab',ST_GeomFromText('POINT(-118.289442 34.019663)'));
+insert into spata values(11,'VKC Library',ST_GeomFromText('POINT(-118.284030 34.021449)'));
+insert into spata values(12,'Home',ST_GeomFromText('POINT(-118.293141 34.023544)'));
+
+
+COMMAND 1(CONVEX HULL)
+
+SELECT ST_AsText(ST_ConvexHull(ST_Collect(g))) AS convex_hull FROM spata;
+
+
+Command 2(NEAREST NEIGHBORS)
+
+SELECT g1.Loc_ID As Source_ID, g1.Loc_Dec As Source, g2.Loc_ID As Neighbor_ID, g2.Loc_Dec As Neighbor FROM spata As g1, spata As g2 WHERE g1.Loc_ID = 12  and g1.Loc_ID <> g2.Loc_ID ORDER BY ST_Distance(g1.g,g2.g) LIMIT 4;

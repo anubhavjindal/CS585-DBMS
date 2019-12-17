@@ -1,0 +1,117 @@
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/green-dot.png</href></Icon></IconStyle>
+</Style>
+<Style id="z2">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+<Style id="z3">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/yellow-dot.png</href></Icon></IconStyle>
+</Style>
+<Style id="z4">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/orange-dot.png</href></Icon></IconStyle>
+</Style>
+<Style id="z5">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/red-dot.png</href></Icon></IconStyle>
+</Style>
+<Style id="z6">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/ltblue-dot.png</href></Icon></IconStyle>
+</Style>
+<Style id="z7">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/pink-dot.png</href></Icon></IconStyle>
+</Style>
+<Style id="z8">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/green-dot.png</href></Icon></IconStyle>
+</Style>
+<Style id="z9">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/red-dot.png</href></Icon></IconStyle>
+</Style>
+<Placemark><name>Leavy Library</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.283079,34.021620 </coordinates></Point>
+</Placemark>
+<Placemark><name>SGM</name>
+<styleUrl>#z2</styleUrl><Point><coordinates>-118.2891085,34.0218945</coordinates></Point>
+</Placemark>
+<Placemark><name>USC Village</name>
+<styleUrl>#z3</styleUrl><Point><coordinates>-118.284187,34.023956</coordinates></Point>
+</Placemark>
+<Placemark><name>Bookstore</name>
+<styleUrl>#z4</styleUrl><Point><coordinates>-118.286403,34.020822</coordinates></Point>
+</Placemark>
+<Placemark><name>Figeuroa St</name>
+<styleUrl>#z5</styleUrl><Point><coordinates>-118.280203,34.0218359</coordinates></Point>
+</Placemark>
+<Placemark><name>Home</name>
+<styleUrl>#z6</styleUrl><Point><coordinates>-118.293141,34.023544</coordinates></Point>
+</Placemark>
+<Placemark><name>West Exposition Blvd</name>
+<styleUrl>#z7</styleUrl><Point><coordinates>-118.286301,34.018638</coordinates></Point>
+</Placemark>
+<Placemark><name>Vermont</name>
+<styleUrl>#z8</styleUrl><Point><coordinates>-118.2914482,34.0184413</coordinates></Point>
+</Placemark>
+<Placemark><name>Symphonic Hall</name>
+<styleUrl>#z9</styleUrl><Point><coordinates>-118.2853986,34.0233114</coordinates></Point>
+</Placemark>
+<Placemark><name>Cinematics School</name>
+<styleUrl>#z3</styleUrl><Point><coordinates>-118.286447,34.023818</coordinates></Point>
+</Placemark>
+<Placemark><name>Salvatory Lab</name>
+<styleUrl>#z7</styleUrl><Point><coordinates>-118.289442,34.019663</coordinates></Point>
+</Placemark>
+<Placemark><name>VKC Library</name>
+<styleUrl>#z5</styleUrl><Point><coordinates>-118.284030,34.021449</coordinates></Point>
+</Placemark>
+
+
+<Placemark> 
+ <Polygon> <outerBoundaryIs>  <LinearRing>  
+  <coordinates>
+  -118.2914482,34.0184413,0.
+  -118.293141,34.023544,0.
+  -118.284187,34.023956,0.
+  -118.280203,34.0218359,0.
+  -118.286301,34.018638,0.
+  -118.2914482,34.0184413,0.
+  </coordinates>
+ </LinearRing> </outerBoundaryIs> </Polygon>
+  <Style> 
+  <PolyStyle>  
+   <color>#a0ff00ff</color>
+  <outline>0</outline>
+  </PolyStyle> 
+ </Style>
+</Placemark>
+
+
+<Placemark>
+  <LineString>
+  <name>Salvatory Lab</name>
+    <extrude>1</extrude>
+    <coordinates>-118.293141,34.023544,0  -118.289442,34.019663,0</coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <LineString>
+  	<name>Vermont</name>
+    <extrude>1</extrude>
+    <coordinates>-118.293141,34.023544,0  -118.2914482,34.0184413,0</coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <LineString>
+  <name>Cinematics School</name>
+    <extrude>1</extrude>
+    <coordinates>-118.293141,34.023544,0  -118.286447,34.023818,0</coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <LineString>
+  <name>SGM</name>
+    <extrude>1</extrude>
+    <coordinates>-118.293141,34.023544,0  -118.2891085,34.0218945,0</coordinates>
+  </LineString>
+</Placemark>
+
+</Document></kml>
